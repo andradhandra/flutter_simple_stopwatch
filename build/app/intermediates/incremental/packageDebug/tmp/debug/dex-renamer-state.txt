@@ -1,4 +1,0 @@
-#Thu Jan 13 11:28:50 WIB 2022
-base.0=/home/ridza-softeng/Works/code training/stopwatch_flutter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
