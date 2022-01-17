@@ -20,16 +20,25 @@ class StopwatchRenderer extends StatelessWidget {
         pi + (2 * pi / 60000) * elapsedTime.inMilliseconds;
     return Stack(
       children: [
-        ...List.generate(
-          60,
-          (i) => Positioned(
-              top: radius,
-              left: radius,
-              child: StopwatchMarker(
-                seconds: i,
-                radius: radius,
-              )),
-        ),
+        for (int i = 0; i < 60; i++)
+          Positioned(
+            top: radius,
+            left: radius,
+            child: StopwatchMarker(
+              seconds: i,
+              radius: radius,
+            ),
+          ),
+        for (int i = 5; i <= 60; i += 5)
+          Positioned(
+            top: radius,
+            left: radius,
+            child: StopwatchTextMarker(
+              value: i,
+              maxValue: 60,
+              radius: radius,
+            ),
+          ),
         Positioned(
           top: radius,
           left: radius,
